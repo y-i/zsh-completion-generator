@@ -7,7 +7,7 @@ def createCompilcatinWithDepth(cmd, names, num)
         subcmds.push("#{subcmd['command']}:#{subcmd['description']}")
     }
     funcname = names.join('__')
-    puts "_#{funcname}(){"
+    print "_#{funcname}(){\n"
 
     print "\tsubcmds=("
     print subcmds.join(' ')
@@ -25,8 +25,8 @@ def createCompilcatinWithDepth(cmd, names, num)
     print "\t\t;;\n"
     print "\tesac\n"
 
-    puts "}"
-    puts ''
+    print "}\n\n"
+    
     cmd['subcmds'].each{ |subcmd|
         if subcmd.key?('subcmds')
             names.push(subcmd['command'])
