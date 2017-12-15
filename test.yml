@@ -1,0 +1,21 @@
+-
+  name: hoge
+  subcmds:
+    - 
+      command: foo
+      description: bar
+    - 
+      command: test
+      description: test test
+      subcmds:
+        -
+          command: hoge2
+          description: hogehoge
+        -
+          command: fuga2
+          description: fugafuga
+- name: fuga
+  subcmds:
+    - 
+      command: name
+      description: description
